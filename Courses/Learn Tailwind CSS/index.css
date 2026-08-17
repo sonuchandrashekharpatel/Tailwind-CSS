@@ -1,0 +1,181 @@
+/* Chapter - 1: Learn Tailwind CSS */
+
+/* Lesson 21: Want to become a Scrimbassador? */
+
+
+/* Lesson 20: Congrats */
+
+
+/* Lesson 19: Desktop layout */
+
+
+/* Lesson 18: Responsive Design */
+
+
+/* Lesson 17: Extra Styling */
+
+
+/* Lesson 16: Modifiers */
+
+
+/* Lesson 15: Other common utilities */
+
+
+/* Lesson 14: Layout */
+
+
+/* Lesson 13: Borders */
+
+
+/* Lesson 12: Flexbox */
+
+
+/* Lesson 11: Display and Position */
+
+
+/* Lesson 10: Typography */
+
+
+/* Lesson 9: Other Typography Classes */
+
+
+/* Lesson 8: Text Classes */
+
+
+/* Lesson 7: Font Classes */
+
+
+/* Lesson 6: Header and Footer */
+
+
+/* Lesson 5: Padding and Margin */
+
+
+/* Lesson 4: Colours */
+/* 
+class= 'bg-{color}-{shade}'
+class = 'text-{color}-{shade}'
+class= '[bg/text]-[black-white]'
+*/
+
+body{
+    display: flex;
+    align-items:center;
+    height:100vh;
+    justify-content:center;
+}
+
+main{
+    background: white;
+    padding:25px;
+    font-size:2rem;
+    text-align:center;
+}
+
+p:nth-child(2){
+    font-size: 3rem;
+    font-weight:bold;
+}
+
+/* Lesson 3: Element Sizing */
+/* 
+Fixed units
+1 unit = 0.25rem = 4px
+
+Value           Properties
+[w/h]-0         [width/height]: 0;
+[w/h]-1         [width/height]: 0.25rem
+[w/h]-4         [width/height]: 1rem
+
+[w/h]-96        [width/height]: 24rem
+
+Relative & Viewport units 
+Class           Properties
+[w/h]-1/2       [width/height]: 50%
+[w/h]-1/4       [widht/height]: 25%
+[w/h]-3/5       [width/height]: 60%
+
+[w/h]-full      [width/height]: 100%
+w-screen        width: 100vw;
+h-screen        height: 100vh;
+
+*/
+
+/* 
+body, main{
+    height:100vh;
+}
+section{
+    padding:5px;
+}
+section:nth-child(1){
+    background-color:#DDC3D0;
+}
+section:nth-child(2){
+    background-color:#DBDAEA;
+}
+section:nth-child(3){
+    background-color:#DBFCFF;
+}
+
+ */
+/* Lesson 2: What is Tailwind CSS? */
+/* 
+What is Tailwind CSS?
+It is utility first CSS framework that allows us 
+style your HTML element directly in our markup.
+
+Why Tailwind?
+1. Utility-first approach
+2. Speed & Efficieny
+3. Consistend Design System
+4. Who should use it? 
+
+*/
+
+/* Lesson 1: Welcome to Learn Tailwind CSS! */
+/* 
+We will be learning:
+
+1. Element Sizing
+2. The Color System
+3. Paddings & Margins
+4. Typography
+5. Display & Position
+6. Flexbox
+7. Borders
+8. Extras
+9. Modifiers
+10. Responsive Design
+
+*/
+
+/* 
+import lessonGenerator from "../../../utils/index.js"
+
+const chapterName = "Learn Tailwind CSS"
+const chapterNum = 1
+const lesson = [
+    "Welcome to Learn Tailwind CSS!",
+    "What is Tailwind CSS?",
+    "Element Sizing",
+    "Colours",
+    "Padding and Margin",
+    "Header and Footer",
+    "Font Classes",
+    "Text Classes",
+    "Other Typography Classes",
+    "Typography",
+    "Display and Position",
+    "Flexbox",
+    "Borders",
+    "Layout",
+    "Other common utilities",
+    "Modifiers",
+    "Extra Styling",
+    "Responsive Design",
+    "Desktop layout",
+    "Congrats",
+    "Want to become a Scrimbassador?"
+]
+lessonGenerator(chapterName, lesson, chapterNum)  */
