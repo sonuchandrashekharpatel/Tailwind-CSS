@@ -1,7 +1,9 @@
 /* Chapter - 1: Learn Tailwind CSS */
 
 /* Lesson 21: Want to become a Scrimbassador? */
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 /* Lesson 20: Congrats */
 
@@ -43,8 +45,15 @@
 
 
 /* Lesson 7: Font Classes */
-
-
+/* main{
+    height:100vh;
+    border-bottom: 30px #a16207 solid;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:flex-end;
+}
+ */
 /* Lesson 6: Header and Footer */
 
 
@@ -57,7 +66,7 @@ class= 'bg-{color}-{shade}'
 class = 'text-{color}-{shade}'
 class= '[bg/text]-[black-white]'
 */
-
+/* 
 body{
     display: flex;
     align-items:center;
@@ -75,7 +84,7 @@ main{
 p:nth-child(2){
     font-size: 3rem;
     font-weight:bold;
-}
+} */
 
 /* Lesson 3: Element Sizing */
 /* 
