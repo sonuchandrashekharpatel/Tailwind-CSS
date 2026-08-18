@@ -26,16 +26,419 @@
 
 
 <!-- Lesson 13: Borders -->
+<!-- 
+Borders
 
+Border Width
+class='border-{value}'
+
+Value                           Properties
+0                               border-width: 0px;
+2                               border-width: 2px;
+4                               border-width: 4px;
+
+border                          border-width: 1px;
+
+
+Border Colour
+class='border-{color}-{shade}'
+
+
+Border Width & Color (Specific Side)
+class="border-{side}-{value}"
+class="border-{side}-{colour}-{shade}"
+
+Side                        Meaning
+t                           top
+b                           bottom
+l                           left
+r                           right
+x                           left & right
+y                           top & bottom
+
+Border Radius
+class='rounder-{value}'
+
+Value                       Properties
+none                        border-radius: 0rem;
+sm                          border-radius: 0.125rem;
+md                          border-radius: 0.375rem;
+lg                          border-radius: 0.5rem;
+xl                          border-radius: 0.75rem;
+2xl                         border-radius: 1rem;
+3xl                         border-radius: 1.5rem;
+full                        border-radius: 9999px;
+
+
+Border Radius {Specific Corner}
+class='rounded-{corner}-{value}'
+
+Corner                      Value
+tl                          top left
+tr                          top right
+bl                          bottom left
+br                          bottom right
+
+t                           top
+b                           bottom
+r                           right
+l                           left
+
+
+Border  Style
+Value                       Properties
+solid                       border-style: solid;
+dashed                      border-style: dashed;
+dotted                      border-style: dotted;
+double                      border-style: double;
+hidden                      border-width: hidden;
+none                        border-width: none;
+-->
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="bg-gray-300">
+        <section class="flex items-center justify-center h-screen">
+            <img class="border-8 border-orange-400 border-double rounded-full w-96" src="img/orange.jpg" alt="orange on a gray tabletop"/>
+        </section>
+    </body>
+</html>
 
 <!-- Lesson 12: Flexbox -->
+<!-- 
+Creating a Flexbox
 
+class="flex"
+
+Flex Direction
+class='flex-{direction}'
+
+Direction                       Properties
+
+row                             flex-direction: row;
+row-reverse                     flex-direction: row-reverse;
+col                             flex-direction: columnn;
+col-reverse                     flex-direction: column-reverse;
+
+Justify Content
+
+class="justify-{value}"
+
+Value                           Properties
+
+normal                          justify-content: normal;
+start                           justify-content: flex-start;
+end                             justify-content: end;
+center                          justify-content: center;
+between                         justify-content: space-between;
+around                          justify-content: space-around;
+evenly                          justify-content: space-evenly;
+stretch                         justify-content: stretch;
+
+
+Align Items
+class='itmes-{value}'
+
+Value                           Properties
+
+start                           align-items: flex-start;
+end                             align-items: flex-end;
+center                          align-items: center;
+baseline:                       align-items: baseline;
+stretch                         align-items: stretch;
+
+Gap
+
+class='gap-{value}'
+
+class='gap-[x/y]-{value}'
+
+Remember, 1 Unit = 0.25rem!
+
+Flex Grow
+class='grow-0'
+
+Class                       Properties
+grow                        flex-grow: 1
+grow-0                      flex-grow: 0
+              
+
+Flex Wrap
+class= "flex-{value}"
+
+Value                       Properties
+wrap                        flex-wrap: wrap;
+wrap-reverse                flex-wrap: wrap-reverse;
+nowrap                      flex-wrap: nowrap;
+     
+There are more!
+. Flex Basis                . Order             . Align Content 
+. Flex Direction            . Gap               . Align Items 
+. Flex Wrap                 . Justify Content   . Align Self 
+. Flex                      . Justify Items     . Place Content 
+. Flex Grow                 . Justify Self      . Place Content 
+. Flex Grow                 . Justify Self      . Place Items   
+. Flex Shrink               . Place self
+
+-->
+
+
+<!--
+CHALLENGE: Style the menu to look like the mockup
+- Position and place the menu in the center of the viewport using Flexbox
+- Using Flexbox, center-align and space the menu contents
+- Display and space the 3 price-points side by side
+- Display and space the Extras side by side, wrapping if needed. 
+- Size the titles
+-->
+<!-- TITLE -->
+<!-- COFFEE SVG -->
+<!-- ITEM 1 -->
+<!-- ITEM 2 -->
+<!-- ITEM 3 -->
+<!-- EXTRAS -->
+<!-- <!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body class="flex items-center justify-center h-screen text-center bg-pink-900 ">
+        
+        
+        <main class="flex flex-col w-5/6 gap-6 p-10 font-mono text-white bg-green-950">
+            
+            <h1 class="text-2xl font-bold">Coffee</h1>
+            
+            <svg class="m-auto " xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#ffffff"><path d="M160-120v-80h640v80H160Zm160-160q-66 0-113-47t-47-113v-400h640q33 0 56.5 23.5T880-760v120q0 33-23.5 56.5T800-560h-80v120q0 66-47 113t-113 47H320Zm0-80h240q33 0 56.5-23.5T640-440v-320H240v320q0 33 23.5 56.5T320-360Zm400-280h80v-120h-80v120ZM320-360h-80 400-320Z"/>
+            </svg>
+            
+            <section>
+                <h2>Cappuccino</h2>
+                <section class="flex justify-around">
+                    <p>$3.60 (S)</p>
+                    <p>$4.20 (M)</p>
+                    <p>$5.00 (L)</p>
+                </section>
+            </section>
+            
+            <section>
+                <h2>Flat White</h2>
+                <section class="flex justify-around">
+                    <p>$3.60 (S)</p>
+                    <p>$4.20 (M)</p>
+                    <p>$5.00 (L)</p>
+                </section>
+            </section>
+            
+            <section>
+                <h2>Latte</h2>
+                <section class="flex justify-around">
+                    <p>$3.60 (S)</p>
+                    <p>$4.20 (M)</p>
+                    <p>$5.00 (L)</p>
+                </section>
+            </section>
+            
+            <section>
+                <h2>Extras ($3ea)</h2>
+                <section class="flex flex-wrap justify-center gap-x-6">
+                    <p>Cream</p>
+                    <p>Wafer</p>
+                    <p>Shortbread</p>
+                    <p>Marshmellow</p>
+                    <p>Chocolate square</p>
+                    <p>Cinnamon Stick</p>
+                </section>
+            </section>
+            
+        </main>
+    </body>
+</html>
+ -->
 
 <!-- Lesson 11: Display and Position -->
+<!-- 
 
+Display
+class="block"
+class="inline"
+class="inline-block"
+class="hidden"
+
+Position
+class='static'
+class='absolute'
+class='fixed'
+class='relative'
+class='sticky'
+
+Placement
+class='{direction}-{value}'
+
+Direction               Value
+
+top                     top: ...;
+right                   right: ...;
+bottom                  bottom: ...;
+left                    left: ...;
+
+Value                   Properties
+
+1 Unit                  1 = 0.25rem
+Relative Unit           1/2, 3/4, full... etc
+Auto                    auto
+
+
+-->
+<!-- 
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <main class="h-screen bg-yellow-900 border-4 border-yellow-800">
+        <section class="relative border-8 border-yellow-800 h-1/2">
+            <img class="absolute bottom-1 left-5"  src="img/potion1.png" alt="a yellow potion bottle with a sun icon"/>
+            <img class="absolute bottom-1 left-1/3" src="img/potion2.png" alt="a pink potion bottle with a cross icon"/>
+            <img class="absolute bottom-1 right-5" src="img/potion3.png" alt="a green potion bottle with a fire icon"/>
+        </section>
+        <section class="relative border-8 border-yellow-800 h-1/2">
+            <img class="absolute bottom-1 left-5" src="img/potion4.png" alt="a red potion bottle with a lightning icon"/>
+            <img class="absolute bottom-1 right-5" src="img/potion5.png" alt="a blue potion bottle with a gas mask icon"/>
+            <img class="absolute bottom-1 left-1/3" src="img/potion6.png" alt="a purple potion bottle with a skull and crossbones icon"/>
+        </section>
+    </main>
+</body>
+</html> -->
 
 <!-- Lesson 10: Typography -->
+<!--
+YOUR TASKS
+1. Set the background colour (Slate 700)
+2. Make the text white
+3. Resize the header's icon/logo
+4. Add padding
+-->
+<!-- 
+<!doctype html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://cdn.tailwindcss.com"></script>
+    </head>
+    <body>
+        <header class="p-2 font-mono text-center text-white bg-slate-700">
+            <section>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.56 162.44" xmlns:v="https://vecta.io/nano" fill="white" class="w-10 mx-auto"><path d="M88.94 119.91v42.53H75.4V92.17c-26.58.24-47.78-9.8-62.83-31.49C.01 42.59-.81 21.91.41.47 20.12-.94 39.07.28 56.17 11.7c16.82 11.23 26.68 27.1 31.55 47.46 10.5-14.19 22.98-24.84 39.54-28.46 11.82-2.59 24.14-2.93 36.15-4.26 6.86 44.12-17.09 92.51-74.47 93.48zM14.33 14.31C12.4 48.23 36.69 81.49 75.09 77.17c1.17-36.65-25.68-64.07-60.76-62.86zm75.07 90.8c37.04.92 61.67-25.55 60.93-63.1-32.53-4.75-62.82 26.43-60.93 63.1z"/></svg>
+            </section>
+            <nav class="my-1">
+                <a href="#">Blog</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+        
+        <main>
+            <h2 class="my-3 font-mono text-2xl font-bold tracking-widest text-center uppercase">Blog</h2>
+            
+            <section class="w-11/12 mx-auto">
+                
+                <section class="mx-auto bg-gray-100 w-80">
+                    <img src="img/post_houseplants.jpg" alt="Houseplants with Attitudes"/>
+                    
+                    <section class="p-4">
+                        
+                        <section>
+                            <section>
+                                <section>
+                                    <img class="w-8" src="img/author_fern.jpg" alt="Fern Greenleaf" />
+                                    <span class="text-xs font-medium text-green-500">Fern Greenleaf</span>
+                                </section>
+                                <svg height="20px" viewBox="0 -960 960 960" width="20px"><path d="M480-160q-33 0-56.5-23.5T400-240q0-33 23.5-56.5T480-320q33 0 56.5 23.5T560-240q0 33-23.5 56.5T480-160Zm0-240q-33 0-56.5-23.5T400-480q0-33 23.5-56.5T480-560q33 0 56.5 23.5T560-480q0 33-23.5 56.5T480-400Zm0-240q-33 0-56.5-23.5T400-720q0-33 23.5-56.5T480-800q33 0 56.5 23.5T560-720q0 33-23.5 56.5T480-640Z"/></svg>
+                                <span class="text-sm font-medium">More options</span>
+                            </section>
+                        </section>
+                        
+                        <section>
+                            <h2 class="font-medium ">Houseplants with Attitude: Meet the Divas of Your Living Room</h2>
+                            <p class="mt-1 text-xs font-semibold">
+                                If you thought your Monstera was just sitting quietly in the corner, think again! These houseplants are full of sass, drama, and demands. From diva-like Calatheas that throw a tantrum if you mist them wrong to ferns that seem to love dying for attention, we’re here to introduce you to the plant kingdom’s most dramatic members. 
+                            </p>
+                        </section>
+                        
+                        <hr>
+                        
+                        <section>
+                            <span class="text-xs italic text-slate-500">9 likes</span>
+                            <svg class="w-4" xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="m480-120-58-52q-101-91-167-157T150-447.5Q111-500 95.5-544T80-634q0-94 63-157t157-63q52 0 99 22t81 62q34-40 81-62t99-22q94 0 157 63t63 157q0 46-15.5 90T810-447.5Q771-395 705-329T538-172l-58 52Zm0-108q96-86 158-147.5t98-107q36-45.5 50-81t14-70.5q0-60-40-100t-100-40q-47 0-87 26.5T518-680h-76q-15-41-55-67.5T300-774q-60 0-100 40t-40 100q0 35 14 70.5t50 81q36 45.5 98 107T480-228Zm0-273Z"/></svg>
+                        </section>
+                        
+                    </section>
+                    
+                </section>
+                
+                
+            </section>
+            
+        </main>
+        <footer class="p-4 text-center text-white bg-slate-700">
+            <section>
+                <h3 class="mb-3 font-bold tracking-tight uppercase">Subscribe</h3>
+                <p class="m-4">Want to get notified when a new blog post is up? Sign up for the newsletter and never miss out!</p>
+                <form class="mb-4 ">
+                    <input  class="px-3 py-1" type="email" placeholder="email@example.com"/>
+                    <input class="p-1 font-medium text-black bg-slate-400" type="submit" value="Sign Up"/>
+                </form>
+                <span class="m-1 font-mono text-xs tracking-tight">&copy; Fluffy McDuck</span>
+            </section>
+        </footer>
+    </body>
+</html>
+ -->
 
+<!--
+CONTENT
+
+Houseplants with Attitude: Meet the Divas of Your Living Room
+    Fern Greenleaf
+    If you thought your Monstera was just sitting quietly in the corner, think again! These houseplants are full of sass, drama, and demands. From diva-like Calatheas that throw a tantrum if you mist them wrong to ferns that seem to love dying for attention, we’re here to introduce you to the plant kingdom’s most dramatic members.
+    post_houseplants.jpg, author_fern.jpg
+    9 likes
+
+The Secret Social Lives of Plants
+    Daisy Digwell
+    Your plants aren’t just photosynthesising - oh no, they’re plotting. While you’re sleeping, your ficus is texting the succulents about that time you forgot to water them, and your pothos is busy spreading rumours. Explore the underground (or should we say under-soil) world of plant socialisation!
+    post_secret.jpg, author_daisy.jpg
+    11 likes
+
+Vegetable Gardening for Lazy People
+    Ivy Sproutson
+    Gardening doesn’t have to be hard, especially if you’re a pro at doing as little as possible! Here’s your guide to growing veggies that practically take care of themselves, so you can binge-watch your favorite shows while your garden does all the heavy lifting.
+    post_vegetable.jpg, author_ivy.jpg
+    7 likes
+
+Plants You Can’t Kill (Unless You’re Actively Trying)
+    Lily Thistleton
+    If your thumb is more brown than green, this post is for you. We’ve gathered the hardiest, most un-killable plants that can survive even the worst neglect. You’d practically have to insult them daily to make them die - and even then, they might just thrive out of spite!
+    post_kill.jpg, author_lily.jpg
+    2 likes
+
+Grow Your Own Quirky Garden Gang
+    Basil Bloomfield
+    Why settle for ordinary plants when you can have a garden full of characters? From the playful bounce of the Sensitive Plant to the dramatic movements of the Venus Flytrap, we’ll introduce you to some quirky plant pals that are sure to add a little fun and flair to your garden. Get ready to grow a crew with serious personality!
+    post_quirky.jpg, author_basil.jpg
+    20 likes
+    
+-->
 
 <!-- Lesson 9: Other Typography Classes -->
 <!-- 
@@ -67,7 +470,7 @@ loose                   line-height: 2;
 You can also use Tailwind Units (3-10) here!
 
 Line Clamp
-class "line-clamp-{value}"
+class "line-clamp-{value}"for 
 
 Value                       Properties
 
@@ -95,7 +498,7 @@ There are more!
 . Content
 none
 -->
-
+<!-- 
 <!doctype html>
 <html>
     <head>
@@ -104,15 +507,15 @@ none
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body class="bg-gray-400">
-        <main class=" bg-white w-1/2 p-8 font-mono mx-auto mt-6">
+        <main class="w-1/2 p-8 mx-auto mt-6 font-mono bg-white ">
             <h1 class="text-3xl font-black">Local Squirrel Elected Mayor, Promises More Acorns for All</h1>
             <img src="img/mayor_squirrel.jpg" alt="A black and white image of a squirrel looking proud and dignified, as if it's just been elected mayor. The squirrel is wearing a small mayor's hat"/>
-            <p class="text-xs my-4">On Sept 24 2024 by <span class="font-bold">Penny Quickquill</span></p>
+            <p class="my-4 text-xs">On Sept 24 2024 by <span class="font-bold">Penny Quickquill</span></p>
             <p class="text-sm">In an unexpected turn of events, a charismatic squirrel named Oliver Scrufftail has been elected as the new mayor of Woodland Town. Known for his impressive acorn collection and daring tree-jumping skills, Nutty ran on a platform of "More Acorns, Less Fuss." His first act as mayor? Installing squirrel-friendly bridges across all main roads to ensure safe crossings. Local birds are already chirping about a potential alliance. "It’s about time we had a leader who truly understands the needs of us little guys," said Mr. Wiggletail, a prominent rabbit in the community.</p>
             <a  class="underline" href="#">Read more</a>
         </main>
     </body>
-</html>
+</html> -->
 
 
 <!-- Lesson 8: Text Classes -->
@@ -171,14 +574,14 @@ class="normal-case"
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="bg-gray-700 text-center">
+    <body class="text-center bg-gray-700">
         
             
-        <main class="w-96 bg-stone-100 mx-auto p-4 mt-10">
+        <main class="p-4 mx-auto mt-10 w-96 bg-stone-100">
             
             <header>
                 
-                <h1 class="text-red-700 font-bold text-3xl uppercase mb-4">Pirate Flamingo</h1>
+                <h1 class="mb-4 text-3xl font-bold text-red-700 uppercase">Pirate Flamingo</h1>
                 <img class="mx-auto" src="img/pirate_flamingo.jpg" alt="Pirate Flamingo Character"/>
                 
             </header>
@@ -186,18 +589,18 @@ class="normal-case"
             <section>
                 
                 <section>
-                    <h3 class="text-red-500 font-semibold text-xl mt-4">Treasure Finding</h3>
-                    <p class="font-semibold text-sm">Pirate Flamingo has an uncanny ability to locate hidden treasures with her keen eye and long legs, always finding the most valuable loot.</p>
+                    <h3 class="mt-4 text-xl font-semibold text-red-500">Treasure Finding</h3>
+                    <p class="text-sm font-semibold">Pirate Flamingo has an uncanny ability to locate hidden treasures with her keen eye and long legs, always finding the most valuable loot.</p>
                 </section>
                 
                 <section>
-                    <h3 class="text-red-500 font-semibold text-xl mt-4">Squawk Power</h3>
-                    <p class="font-semibold text-sm">With an ear-piercing squawk, she stuns foes and signals her crew, making her the loudest and proudest pirate on the seas.</p>
+                    <h3 class="mt-4 text-xl font-semibold text-red-500">Squawk Power</h3>
+                    <p class="text-sm font-semibold">With an ear-piercing squawk, she stuns foes and signals her crew, making her the loudest and proudest pirate on the seas.</p>
                 </section>
             </section>
             
             <footer>
-                <p class="text-slate-600 text-xs mt-4 italic">"Arrr, why walk the plank when you can stand on one leg?"</p>
+                <p class="mt-4 text-xs italic text-slate-600">"Arrr, why walk the plank when you can stand on one leg?"</p>
             </footer>
             
         </main>
@@ -255,12 +658,12 @@ create a unique stack of books
         <main>
             
             
-            <section class="w-128 bg-red-700 text-pink-200 px-6 py-3 font-serif italic font-bold">The Missing Spoon</section>
-            <section class="w-112 bg-green-600 text-yellow-800 px-auto font-sans not-italic font-thin">Tea for Strangers</section>
-            <section class="w-112 bg-yellow-200 text-blue-800 p-4 font-mono italic font-extrabold">Where the Keys Went</section>
-            <section class="w-98 bg-slate-800 text-amber-200 py-4 px-8 font-sans not-italic font-semibold">Unread Library Books</section>
+            <section class="px-6 py-3 font-serif italic font-bold text-pink-200 bg-red-700 w-128">The Missing Spoon</section>
+            <section class="font-sans not-italic font-thin text-yellow-800 bg-green-600 w-112 px-auto">Tea for Strangers</section>
+            <section class="p-4 font-mono italic font-extrabold text-blue-800 bg-yellow-200 w-112">Where the Keys Went</section>
+            <section class="px-8 py-4 font-sans not-italic font-semibold w-98 bg-slate-800 text-amber-200">Unread Library Books</section>
             
-            <section class="w-96 bg-rose-800 text-amber-200 py-3 px-5 font-serif italic font-black">Conversations at Dawn</section>
+            <section class="px-5 py-3 font-serif italic font-black w-96 bg-rose-800 text-amber-200">Conversations at Dawn</section>
         </main>
     </body>
 </html>
@@ -283,7 +686,7 @@ YOUR TASKS
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
     <body >
-        <header class="bg-slate-700 text-white h-15 mx-auto p-2">
+        <header class="p-2 mx-auto text-white bg-slate-700 h-15">
             <section >
                 <svg class="w-10 mx-auto" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 164.56 162.44" xmlns:v="https://vecta.io/nano" fill="white"><path d="M88.94 119.91v42.53H75.4V92.17c-26.58.24-47.78-9.8-62.83-31.49C.01 42.59-.81 21.91.41.47 20.12-.94 39.07.28 56.17 11.7c16.82 11.23 26.68 27.1 31.55 47.46 10.5-14.19 22.98-24.84 39.54-28.46 11.82-2.59 24.14-2.93 36.15-4.26 6.86 44.12-17.09 92.51-74.47 93.48zM14.33 14.31C12.4 48.23 36.69 81.49 75.09 77.17c1.17-36.65-25.68-64.07-60.76-62.86zm75.07 90.8c37.04.92 61.67-25.55 60.93-63.1-32.53-4.75-62.82 26.43-60.93 63.1z"/></svg>
             </section>
@@ -293,7 +696,7 @@ YOUR TASKS
             </nav>
         </header>
         
-        <main class=" w-80 mx-auto">
+        <main class="mx-auto w-80">
             <h2>Blog</h2>
             
             <section class="w-11/12 mx-auto">
@@ -301,7 +704,7 @@ YOUR TASKS
                 <section>
                     <img src="img/post_houseplants.jpg" alt="Houseplants with Attitudes"/>
                     
-                    <section class="bg-blue-50 p-4">
+                    <section class="p-4 bg-blue-50">
                         
                         <section>
                             <section>
@@ -336,7 +739,7 @@ YOUR TASKS
             </section>
             
         </main>
-        <footer class="bg-slate-800 text-white p-4 mx-auto mt-4">
+        <footer class="p-4 mx-auto mt-4 text-white bg-slate-800">
             <section>
                 <h3>Subscribe</h3>
                 <p>Want to get notified when a new blog post is up? Sign up for the newsletter and never miss out!</p>
@@ -451,15 +854,15 @@ Height: 24 units (6rem)
     </head>
     <body>
         <main>
-            <section class="bg-blue-100 text-purple-700 m-4 p-6 w-1/2">
+            <section class="w-1/2 p-6 m-4 text-purple-700 bg-blue-100">
                 <p>Section 1</p>
             </section>
             
-            <section class="bg-green-700 text-green-100 my-6 p-8 w-full h-40">
+            <section class="w-full h-40 p-8 my-6 text-green-100 bg-green-700">
                 <p>Section 2</p>
             </section>
             
-            <section class="bg-yellow-200 text-amber-800 mx-auto pt-4 w-5/12 h-24">
+            <section class="w-5/12 h-24 pt-4 mx-auto bg-yellow-200 text-amber-800">
                 <p>Section 3</p>
             </section>
         </main>
@@ -542,8 +945,8 @@ Height: 24 units (6rem)
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="h-screen flex item-center justify-center">
-        <button class="bg-red-500 text-white px-4 py-2 rounded-full font-bold text-2xl hover:bg-red-700 hover:uppercase">Don't click me!</button>
+    <body class="flex justify-center h-screen item-center">
+        <button class="px-4 py-2 text-2xl font-bold text-white bg-red-500 rounded-full hover:bg-red-700 hover:uppercase">Don't click me!</button>
     </body>
 </html>
  -->
